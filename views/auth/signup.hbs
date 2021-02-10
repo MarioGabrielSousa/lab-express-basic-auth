@@ -1,0 +1,15 @@
+<h2>Signup</h2>
+<form action="/signup" method="POST">
+<label>Username</label>
+<input type="text" name="username" placeholder="Your username" required> <!-- required é a validation do frontend-->
+
+<label>Password</label>
+<input type="password" name="password" placeholder="Your password" required>
+
+<button type="submit">Create account</button>
+
+{{#if errorMessage}}
+<div>{{errorMessage}}</div>
+{{/if}}
+
+</form>
