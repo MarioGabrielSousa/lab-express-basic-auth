@@ -1,3 +1,15 @@
-<h1>{{title}}</h1>
+<header>
+    <h1>{{title}}</h1>
+</header>
 <p>Welcome to {{title}}</p>
+{{#if user}}
+Hello {{user.username}}
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+    <a href="/private">Ultra Secret Page</a>
+</form>
+{{/if}}
+{{#unless user}}
 <a href="/signup">Signup</a>
+<a href="/login">Login</a>
+{{/unless}}
